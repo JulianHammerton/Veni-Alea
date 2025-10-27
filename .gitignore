@@ -1,0 +1,15 @@
+# TeX artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+# VS Code
+.vscode/
+/.vs
+/main.run.xml
+/main-blx.bib

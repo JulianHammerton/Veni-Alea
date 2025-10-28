@@ -1,0 +1,44 @@
+% ==== SIMPLE SPELL CARD MACRO ====
+\newcommand{\SpellCard}[4]{%
+  \fbox{%
+    \parbox[t][3.8cm][t]{6.5cm}{%
+      \textbf{#1} \hfill \textit{Level #2}\\
+      \rule{\linewidth}{0.3pt}\\
+      \textbf{#3}\\[2pt]
+      \small #4
+    }%
+  }%
+}
+
+% ==== CHRONOMANCER SPELLS ====
+\section*{Chronomancer Spells}
+\SpellCard{Slow Time Bubble}{1}{Pause and Observe}{Allow you to wait within a bubble of slowed time, large enough for one person.}\hspace{2mm}
+\SpellCard{Accelerate Time Bubble}{1}{Hasten the Flow}{The target experiences time at triple speed; effects on them occur three times faster.}\hspace{2mm}
+\SpellCard{Pre-Move}{1}{Precognitive Reflex}{Lets you act before others, dodging a number of attacks equal to your roll success.}\hspace{2mm}
+\SpellCard{Hold Object}{1}{Temporal Suspension}{Freezes a small object midair—thrown, dropped, or falling.}\hspace{2mm}
+\SpellCard{First Love}{2}{Echo of Joy}{Sends the mind back to a happy memory; grants morale advantage or calm.}\hspace{2mm}
+\SpellCard{Hospice}{2}{Echo of Loss}{Projects the mind forward to a sorrowful vision, instilling empathy or despair.}\hspace{2mm}
+\SpellCard{Prophecy}{3}{Glimpse of What Will Be}{Reveals the most probable outcome of current events.}\hspace{2mm}
+\SpellCard{Speak to Self}{3}{Temporal Dialogue}{Allows brief conversation with your future or past self, once per day.}
+
+% ==== WITHERER SPELLS ====
+\section*{Witherer Spells}
+\SpellCard{Leech Touch}{1}{Drain Vitality}{Transfer a small amount of life from a target to yourself or another.}\hspace{2mm}
+\SpellCard{Bone Stitch}{1}{Reanimate Flesh}{Fuse bone and tissue to close wounds—leaves visible scars.}\hspace{2mm}
+\SpellCard{Pale Gift}{1}{Borrowed Life}{Temporarily heal an ally by drawing life from a nearby corpse or decayed matter.}\hspace{2mm}
+\SpellCard{Decay Mark}{1}{Wither Flesh}{Inflicts slow necrotic rot, reducing defense over time.}\hspace{2mm}
+\SpellCard{Graft Limb}{2}{Patchwork Renewal}{Attach or fuse organic material—restores functionality, but corrupts appearance.}\hspace{2mm}
+\SpellCard{Vita Leash}{2}{Life Bond}{Link vitality between two beings; damage or healing shared between them.}\hspace{2mm}
+\SpellCard{Soul Reclaim}{3}{Harvest Essence}{Absorb a dying creature’s last breath to restore your energy or extend life.}\hspace{2mm}
+\SpellCard{Pale Bloom}{3}{Bloom of Decay}{A wave of rot and renewal erupts—enemies wither, allies heal for half as much.}
+
+% ==== MENDER SPELLS ====
+\section*{Mender Spells}
+\SpellCard{Soothe Wound}{1}{Calm the Body}{Close fresh injuries and reduce bleeding.}\hspace{2mm}
+\SpellCard{Cleanse Ailment}{1}{Purge Infection}{Removes toxins or minor diseases from the target.}\hspace{2mm}
+\SpellCard{Reknit Flesh}{1}{Basic Restoration}{Heals moderate wounds and restores minor stamina.}\hspace{2mm}
+\SpellCard{Shared Breath}{1}{Sustain Life}{Share your vitality with another; you take exhaustion instead of them.}\hspace{2mm}
+\SpellCard{Renewal Surge}{2}{Greater Restoration}{Rapidly restores health and morale to a group in a small radius.}\hspace{2mm}
+\SpellCard{Pain Mirror}{2}{Transference}{Redirect pain from one ally to yourself or another willing subject.}\hspace{2mm}
+\SpellCard{Sanctify Form}{3}{Perfect Regrowth}{Regrows lost tissue or limb over a short period; leaves you fatigued.}\hspace{2mm}
+\SpellCard{Last Light}{3}{Death’s Reprieve}{Stabilizes a dying creature; prevents death for one more round.}

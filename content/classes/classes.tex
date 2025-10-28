@@ -1,0 +1,179 @@
+% !TEX root = ../main.tex
+\section{Classes}
+
+% --- Simple full-width class card (no extra packages) ---
+\newcommand{\ClassCard}[4]{%
+  \noindent\fbox{%
+    \parbox[t]{\linewidth}{%
+      \textbf{#1}\par
+      \small
+      \textbf{Dice Gain per Level:} #2\par
+      \textbf{Concept.} #3\par
+      \textbf{Playstyle.} #4%
+    }%
+  }\par\vspace{5mm}%
+}
+
+% ===== RED DICERS — Strength, Fury, Presence =====
+\subsection*{Red Dicers — Strength, Fury, Presence}
+
+\ClassCard
+  {Berserker}
+  {+2 Red}
+  {Pure rage and relentless assault.}
+  {Unchecked physical offense; thrives in chaos and extended melees.}
+
+\ClassCard
+  {Warrior}
+  {+1 Red, +1 Blue}
+  {Disciplined master of combat.}
+  {Balances attack and defense; stays effective in any phase of battle.}
+
+\ClassCard
+  {Warlord}
+  {+1 Red, +1 Yellow}
+  {Commander of the front line.}
+  {Inspires allies; can share setup or rerolls through tactical shouts.}
+
+\ClassCard
+  {Pyrowarrior}
+  {+1 Red, +1 Purple}
+  {Fire-infused fighter (Red + Pyro).}
+  {Empowers weapons with flame; excels at damage over time and pressure.}
+
+\ClassCard
+  {Stormblade}
+  {+1 Red, +1 Purple}
+  {Elemental warrior (Red + Lightning).}
+  {Channels volatile energy into explosive strikes and burst repositioning.}
+
+\clearpage
+
+% ===== BLUE DICERS — Defense, Endurance, Control =====
+\subsection*{Blue Dicers — Defense, Endurance, Control}
+
+\ClassCard
+  {Defender}
+  {+2 Blue}
+  {The unbreakable wall.}
+  {Absorbs or redirects hits; shields allies and anchors objectives.}
+
+\ClassCard
+  {Sentinel}
+  {+1 Blue, +1 Yellow}
+  {Battlefield controller.}
+  {Interrupts and punishes overreach; reactive counters and zones.}
+
+\ClassCard
+  {Roller}
+  {+1 Blue, +1 Purple}
+  {Shield mage (Blue + Earth).}
+  {Shapes stone and terrain to deflect and fortify; excels at chokepoints.}
+
+\ClassCard
+  {Drencher}
+  {+1 Blue, +1 Purple}
+  {Water-tuned protector (Blue + Water).}
+  {Flows between liquid defense and frozen retaliation; flexible mitigation.}
+
+\ClassCard
+  {Mender}
+  {+1 Blue, +1 Purple}
+  {Healer (Blue + Water).}
+  {Restores wounds and stabilizes allies; master of recovery and sustain.}
+
+\ClassCard
+  {Arbiter}
+  {+1 Blue, +1 Purple}
+  {Enforcer of Order (Order magic).}
+  {Reduces chaos, imposes structure, and defines battlefield constraints.}
+
+\clearpage
+
+% ===== YELLOW DICERS — Agility, Precision, Adaptability =====
+\subsection*{Yellow Dicers — Agility, Precision, Adaptability}
+
+\ClassCard
+  {Rogue}
+  {+2 Yellow}
+  {Quick and cunning skirmisher.}
+  {Nimble attacks, constant dodges, and advantage manipulation.}
+
+\ClassCard
+  {Ranger}
+  {+1 Yellow, +1 Blue}
+  {Expert hunter.}
+  {Pursuit, survival, and precision ranged engagements.}
+
+\ClassCard
+  {Sniper}
+  {+1 Yellow, +1 Red}
+  {Long-ranged fighter (Yellow + Red).}
+  {Converts patience and focus into sudden, lethal bursts from afar.}
+
+\ClassCard
+  {Dragoon}
+  {+1 Yellow, +1 Purple}
+  {Air-infused duelist (Yellow + Air).}
+  {Wind-aided leaps, speed, and mid-air strikes; thrives on verticality.}
+
+\ClassCard
+  {Illuminar}
+  {+1 Yellow, +1 Purple}
+  {Mirror magic empath.}
+  {Reflects opponents, distorts identity and perception; counters single targets.}
+
+\ClassCard
+  {Thantom}
+  {+1 Yellow, +1 Purple}
+  {Decay channeler (Yellow + Thano).}
+  {Manipulates corrosion and entropy to slow foes and obscure self.}
+
+\clearpage
+
+% ===== PURPLE DICERS — Magic, Flow, Transformation =====
+\subsection*{Purple Dicers — Magic, Flow, Transformation}
+
+\ClassCard
+  {Magademic}
+  {+1 Purple}
+  {Scholar of the arcane.}
+  {Masters rote patterns; casts from memory with dependable cadence.}
+
+% Mancer — presented as a wide block with focus options
+\noindent\fbox{%
+  \parbox[t]{\linewidth}{%
+    \textbf{Mancer (Elemental magic)}\par
+    \small
+    \textbf{Dice Gain per Level:} +1 Purple (occasional Elemental die)\par
+    \textbf{Concept.} Master of a single elemental path.\par
+    \textbf{Focus options.}
+    \begin{itemize}
+      \item \textbf{Pyromancer} — Fire \& fury (Red synergy).
+      \item \textbf{Aeromancer} — Wind \& agility (Yellow synergy).
+      \item \textbf{Hydromancer} — Water \& adaptability (Blue synergy).
+      \item \textbf{Electromancer} — Lightning \& speed (often Red synergy).
+      \item \textbf{Geomancer} — Earth \& endurance (Blue synergy).
+      \item \textbf{Biomancer} — Verdant life \& growth (Blue synergy).
+      \item \textbf{Thanomancer} — Decay \& corrosion (Yellow synergy).
+    \end{itemize}
+  }%
+}\par\vspace{5mm}
+
+\ClassCard
+  {Chronomancer}
+  {+1 Purple (occasional Yellow)}
+  {Weaver of time (Time magic).}
+  {Alters sequence and tempo to reshape outcomes; excels at initiative control.}
+
+\ClassCard
+  {Witherer}
+  {+1 Purple (occasional Blue)}
+  {Somatic shaper of vitality (Life magic).}
+  {Outlawed practice manipulating life force; heals or drains with equal pace.}
+
+\ClassCard
+  {Dream Weaver}
+  {+1 Purple (occasional wild dice)}
+  {Bridge to the liminal (Dream magic).}
+  {Bends reality toward dreams, shaping illusion and possibility across the field.}

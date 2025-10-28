@@ -1,0 +1,163 @@
+% style/venialea.sty
+\ProvidesPackage{style/venialea}[2025/10/27 Veni Alea environments]
+
+% --- Core packages (load once, and with RequirePackage inside .sty) ---
+\RequirePackage{xcolor}
+\RequirePackage{tabularx}
+\RequirePackage{tcolorbox}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+
+% ---------- Class one-pagers ----------
+\newtcolorbox{classpagebox}[1][]{enhanced,breakable,
+  colback=white,colframe=black!50,
+  title={#1},fonttitle=\bfseries\large,
+  attach boxed title to top left={yshift=-2mm,xshift=2mm},
+  boxed title style={colback=white},
+  sharp corners,boxrule=0.5pt,top=3mm,bottom=3mm,left=4mm,right=4mm}
+
+% \ClassPage{name}{Hit Die}{Primary}{Saves}{Profs}{Overview}{\item ...}
+\newcommand{\ClassPage}[7]{%
+  \newpage
+  \begin{classpagebox}[Class: #1]
+    \textbf{Hit Die:} #2 \quad
+    \textbf{Primary Ability:} #3 \quad
+    \textbf{Saving Throws:} #4 \par
+    \textbf{Proficiencies:} #5
+
+    \medskip
+    \textbf{Overview.} #6
+
+    \medskip
+    \textbf{Features.}
+    \begin{itemize}
+      #7
+    \end{itemize}
+  \end{classpagebox}%
+}
+
+% ---------- Background cards ----------
+\tcbset{venialeaCard/.style={
+  enhanced,
+  colback=white,colframe=black!50,
+  sharp corners,boxrule=0.5pt,
+  fonttitle=\bfseries,
+  top=2mm,bottom=2mm,left=3mm,right=3mm
+}}
+
+% \BackgroundCard{Title}{Hook}{Skills}{Tools/Langs}{Equipment}{Trait}
+\newcommand{\BackgroundCard}[6]{%
+  \begin{tcolorbox}[venialeaCard,title={#1}]
+    \textbf{Hook.} #2\par
+    \textbf{Skills.} #3\par
+    \textbf{Tools / Languages.} #4\par
+    \textbf{Equipment.} #5\par
+    \textbf{Trait.} #6
+  \end{tcolorbox}%
+}
+
+% Fixed-height background card (you already have this)
+\newcommand{\BackgroundCardFixed}[6]{%
+  \begin{tcolorbox}[venialeaCard,title={#1},height=78mm,valign=top]
+    \textbf{Hook.} #2\par
+    \textbf{Skills.} #3\par
+    \textbf{Tools / Languages.} #4\par
+    \textbf{Equipment.} #5\par
+    \textbf{Trait.} #6
+  \end{tcolorbox}%
+}
+
+% --- table-based, 100% deterministic 3×3 grid (no raster, no tcbraster) ---
+\newcolumntype{C}{>{\vspace{0pt}}X}
+\newenvironment{BackgroundGrid}{%
+  \noindent\begin{tabularx}{\textwidth}{@{}C C C@{}}%
+}{%
+  \end{tabularx}\par\clearpage%
+}
+
+% ---------- Spell block ----------
+\newtcolorbox{spellbox}[1][]{enhanced,breakable,
+  colback=white,colframe=black!50,sharp corners,boxrule=0.5pt,
+  title={#1},fonttitle=\bfseries}
+
+% \Spell{Name}{Level/School}{Casting}{Range}{Components}{Duration}{Text}
+\newcommand{\Spell}[7]{%
+  \begin{spellbox}[#1]
+    \textit{#2}\par
+    \small
+    \textbf{Casting Time:} #3 \quad
+    \textbf{Range:} #4 \quad
+    \textbf{Components:} #5 \quad
+    \textbf{Duration:} #6
+    \medskip
+
+    \normalsize #7
+  \end{spellbox}%
+}
+
+% ---------- Weapons table ----------
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% \WeaponsTable{ rows... }
+\newcommand{\WeaponsTable}[1]{%
+  \begin{tabularx}{\linewidth}{@{} l l c l l r @{}}
+    \toprule
+    \textbf{Name} & \textbf{Type} & \textbf{Dmg} & \textbf{Damage Type} & \textbf{Properties} & \textbf{Wt} \\
+    \midrule
+    #1
+    \bottomrule
+  \end{tabularx}%
+}
+
+% ---------- Spell trading cards ----------
+\tcbset{venialea/spellcard/.style={
+  enhanced, sharp corners,
+  colback=white, colframe=black!60,
+  boxrule=0.5pt, left=3mm, right=3mm, top=2mm, bottom=2mm,
+  fonttitle=\bfseries
+}}
+
+% Square: 63x63 mm
+\newtcolorbox{SpellCardSquare}[1][]{
+  venialea/spellcard,
+  width=63mm, height=63mm, valign=center,
+  title={#1}
+}
+
+% \SpellSquare{Name}{Level/School}{Casting}{Range}{Comp}{Duration}{Text}
+\newcommand{\SpellSquare}[7]{%
+  \begin{SpellCardSquare}[#1]
+    \textit{#2}\par
+    \small
+    \textbf{Casting:} #3 \quad
+    \textbf{Range:} #4 \par
+    \textbf{Comp.:} #5 \quad
+    \textbf{Dur.:} #6
+    \medskip
+
+    \normalsize #7
+  \end{SpellCardSquare}%
+}
+
+% Rectangular trading card: 63x88 mm
+\newtcolorbox{SpellCardRect}[1][]{
+  venialea/spellcard,
+  width=63mm, height=88mm, valign=center,
+  title={#1}
+}
+
+\newcommand{\SpellRect}[7]{%
+  \begin{SpellCardRect}[#1]
+    \textit{#2}\par
+    \small
+    \textbf{Casting:} #3 \quad
+    \textbf{Range:} #4 \par
+    \textbf{Comp.:} #5 \quad
+    \textbf{Dur.:} #6
+    \medskip
+
+    \normalsize #7
+  \end{SpellCardRect}%
+}
+
+\endinput

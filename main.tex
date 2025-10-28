@@ -1,32 +1,73 @@
 \documentclass[11pt,a4paper]{article}
+
+% --- Core packages ---
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{csquotes}
-\usepackage[backend=bibtex,style=authoryear]{biblatex}
-\addbibresource{refs.bib}
+\usepackage{tabularx}   % (defensive: your style uses it; loading here is fine)
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}                % ensure colors exist
+\usepackage[most]{tcolorbox}       % load tcolorbox core + common libs
+\tcbuselibrary{raster,skins,breakable} % explicitly load the raster env
+\usepackage{fancyhdr}   % <-- you use \pagestyle{fancy}, so load this
+\usepackage{hyperref}   % keep hyperref after most packages
+\usepackage{style/venialea} % your custom macros/environments
 
+% --- Fancy header/footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Veni Alea}
+\rhead{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+
+% --- Title metadata ---
 \title{Veni Alea}
 \author{Julian Hammerton}
 \date{\today}
+\newcommand{\copyrightline}{\small © 2025 Julian Hammerton. All rights reserved.}
 
 \begin{document}
-\maketitle
-
-\vspace{1em}
-\begin{center}
-  {\small © 2025 Julian Hammerton. All rights reserved.}
-\end{center}
-
-\section{Introduction}
-Hello, world. See Fig.~\ref{fig:example}. For references, see \textcite{knuth1984texbook}.
-
-\begin{figure}[h]
+\begin{titlepage}
   \centering
-  \includegraphics[width=.5\linewidth]{figures/example.png}
-  \caption{An example figure.}
-  \label{fig:example}
-\end{figure}
+  {\Huge\bfseries Veni Alea\par}
+  \vspace{1cm}
+  {\Large Julian Hammerton\par}
+  \vfill
+  \copyrightline
+  \vspace{1cm}
+\end{titlepage}
 
-\printbibliography
+\pagenumbering{arabic}
+
+{\hypersetup{linkcolor=black}\tableofcontents}
+\newpage
+
+\input{content/intro-game}
+\newpage
+\input{content/intro-dice}
+\newpage
+\input{content/intro-roleplay}
+\newpage
+
+\input{content/character-creation}
+\newpage
+
+\input{content/classes/classes}
+\newpage
+
+\input{content/backgrounds}  % <— tables live here
+\newpage
+
+\section{Spells}
+\input{content/spells/elemental}
+\newpage
+
+\section{Spell Cards}
+\input{content/spells/print-sheets}
+\newpage
+
+\input{content/weapons}
 \end{document}

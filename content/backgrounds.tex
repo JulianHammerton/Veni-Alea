@@ -1,0 +1,292 @@
+% !TEX root = ../main.tex
+\section{Backgrounds}
+
+% --- ultra-simple 3-up row + card macros (no extra packages needed) ---
+\newcommand{\BGCard}[6]{%
+  \fbox{%
+    \parbox[t][60mm][t]{\linewidth}{%
+      \textbf{#1}\par
+      \small
+      \textbf{Hook.} #2\par
+      \textbf{Skills.} #3\par
+      \textbf{Tools / Languages.} #4\par
+      \textbf{Equipment.} #5\par
+      \textbf{Trait.} #6%
+    }%
+  }%
+}
+
+\newcounter{bgrowcount}
+\setcounter{bgrowcount}{0}
+
+\newcommand{\BGRow}[3]{%
+  \stepcounter{bgrowcount}%
+  \noindent
+  \begin{minipage}[t]{0.32\textwidth}#1\end{minipage}\hfill
+  \begin{minipage}[t]{0.32\textwidth}#2\end{minipage}\hfill
+  \begin{minipage}[t]{0.32\textwidth}#3\end{minipage}\par\vspace{6mm}%
+  \ifnum\value{bgrowcount}=3
+    \clearpage
+    \setcounter{bgrowcount}{0}%
+  \fi
+}
+
+% ---------- A ----------
+\subsection*{A}
+\BGRow{
+  \BGCard{Adventurer}{You have travelled far and faced the unexpected.}{Athletics, Survival}{Navigator’s tools}{Bedroll, rope, trail rations, 15 gp}{Used to danger, you keep calm when paths grow uncertain or wild.}
+}{
+  \BGCard{Assassin}{You learned to disappear and end lives quietly.}{Stealth, Deception}{Poisoner’s kit, Disguise kit}{Black hood, dagger, 20 gp}{When subtlety or violence is required, you can plan a kill or a vanishing act.}
+}{
+  \BGCard{Auteur}{Your artistic vision defines you, even when it clashes with others’.}{Performance, Persuasion}{Painter’s or musician’s tools}{Art supplies, sketchbook, 10 gp}{When expression or presentation matters, you know how to command an audience.}
+}
+
+% ---------- B ----------
+\subsection*{B}
+\BGRow{
+  \BGCard{Bombardier}{You make things go boom—accurately.}{Arcana, Investigation}{Tinker’s tools, Alchemist’s supplies}{Satchel of powder, fuse cord, 25 gp}{When breaking barriers or causing diversions, your knowledge of explosives shines.}
+}{
+  \BGCard{Burglar}{Locks and latches are invitations, not obstacles.}{Stealth, Sleight of Hand}{Thieves’ tools}{Dark clothes, crowbar, 10 gp}{When infiltration or quiet entry is required, you know every shadowed route.}
+}{
+  \BGCard{Bhat}{A poet and storyteller, keeper of lineage and memory.}{History, Performance}{Musical instrument}{Scrolls of verse, talisman, 8 gp}{When heritage or morale matters, your tales shape how others remember events.}
+}
+
+% ---------- C ----------
+\subsection*{C}
+\BGRow{
+  \BGCard{Cartographer}{You chart what others merely traverse.}{Survival, Investigation}{Cartographer’s tools}{Map case, compass, 15 gp}{When direction or terrain knowledge is needed, you can read and create maps precisely.}
+}{
+  \BGCard{Courier}{You once carried messages across perilous roads.}{Athletics, Insight}{One language}{Pouch of sealed letters, riding boots, 5 gp}{Used to deadlines and scrutiny, you excel at keeping secrets on the move.}
+}{
+  \BGCard{Chronicler}{You record events faithfully, even when others would forget.}{History, Insight}{Calligrapher’s tools}{Ink, quill, bound journal, 10 gp}{When facts or testimony are disputed, your records carry weight.}
+}
+
+% ---------- D ----------
+\subsection*{D}
+\BGRow{
+  \BGCard{Diplomat}{You mediate between powers through patience and poise.}{Persuasion, Insight}{Fine clothes, signet ring}{Sealed letters, emblem of office, 20 gp}{When tensions rise, you can defuse conflict or negotiate terms.}
+}{
+  \BGCard{Dunce}{You were underestimated, and learned to survive by seeming harmless.}{Deception, Performance}{Simple clothes}{Trinkets, 2 gp}{When others dismiss you, you overhear and outlast them.}
+}{
+  \BGCard{Dziad}{A wandering beggar-sage of folk faiths.}{Persuasion}{Pestle and mortar}{Wooden staff, patchwork cloak, 3 gp}{Villagers trust you with small miracles and gossip others ignore.}
+}
+
+% ---------- E ----------
+\subsection*{E}
+\BGRow{
+  \BGCard{Explorer}{You venture where maps fade.}{Athletics, Survival}{Navigator’s tools}{Compass, tent, 15 gp}{When the group faces the unknown, you lead with confidence and caution.}
+}{
+  \BGCard{Entertainer}{Applause once paid your meals.}{Performance, Acrobatics}{Disguise kit, Instrument}{Costume, 10 gp}{Crowds and attention are your natural terrain.}
+}{
+  \BGCard{Engineer}{You understand the bones of machines and buildings.}{Investigation, Arcana}{Tinker’s tools}{Blueprints, wrench, 20 gp}{When a mechanism fails—or needs sabotaging—you know where to strike.}
+}
+
+% ---------- F ----------
+\subsection*{F}
+\BGRow{
+  \BGCard{Farmer}{Seasons and soil have been your teachers.}{Nature, Animal Handling}{One simple tool}{Hoe, seed pouch, 5 gp}{You can judge weather, fertility, and hunger with uncanny instinct.}
+}{
+  \BGCard{Filid}{You read the tides of time to guide your kin.}{History}{Divination tools}{Omen stones, harp, 12 gp}{In matters of prophecy or heritage, your counsel earns respect.}
+}{
+  \BGCard{Fool}{You survived by turning ridicule into power.}{Performance, Insight}{Jester’s garb}{Bauble, bells, 3 gp}{When laughter cuts tension, you deflect cruelty and reveal truth.}
+}
+
+% ---------- G ----------
+\subsection*{G}
+\BGRow{
+  \BGCard{Griot}{A living archive of ancestry and song.}{Performance, History}{Drum or lute}{Beaded necklace, 8 gp}{When morale falters, your rhythm restores unity.}
+}{
+  \BGCard{Guard}{You protected gates, caravans, or nobles.}{Athletics, Perception}{Simple weapon, uniform}{Badge of rank, 10 gp}{You spot danger early and keep formation under pressure.}
+}{
+  \BGCard{Gambler}{Risk is your chosen art.}{Deception, Insight}{Gaming set}{Deck of cards, lucky coin, 15 gp}{When stakes are uncertain, you read bluffs and odds instinctively.}
+}
+
+% ---------- H ----------
+\subsection*{H}
+\BGRow{
+  \BGCard{Healer}{You treat wounds of flesh and spirit.}{Medicine, Insight}{Healer’s kit}{Bandages, herbs, 10 gp}{When injury or sickness strikes, your hands steady the dying.}
+}{
+  \BGCard{Hermit}{Years of isolation granted strange clarity.}{Nature}{Herbalism kit}{Scroll of insight, 5 gp}{When reflection or faith is tested, your solitude bears wisdom.}
+}{
+  \BGCard{Historian}{You see patterns in the past that guide the present.}{History, Investigation}{Calligrapher’s tools}{Manuscripts, spectacles, 12 gp}{When context or precedent matters, you recall the forgotten.}
+}
+
+% ---------- I ----------
+\subsection*{I}
+\BGRow{
+  \BGCard{Intellectual}{You pursue ideas for their own sake.}{Arcana, History}{One language}{Books, ink, 15 gp}{When reasoning or deduction is needed, you supply the theory.}
+}{
+  \BGCard{Interrogator}{You draw truth from fear, empathy, or silence.}{Intimidation, Insight}{Manacles, torch}{Dark cloak, 5 gp}{When secrets must surface, you know how to make words spill.}
+}{
+  \BGCard{Inventor}{You blend curiosity and recklessness in equal measure.}{Arcana, Investigation}{Tinker’s tools}{Goggles, sketchbook, 10 gp}{When improvisation or contraptions are needed, your mind sparks solutions.}
+}
+
+% ---------- J ----------
+\subsection*{J}
+\BGRow{
+  \BGCard{Jester}{Mockery is your weapon and shield.}{Performance, Deception}{Disguise kit}{Colourful garb, bells, 5 gp}{When others despair, your wit can sway kings or crowds.}
+}{
+  \BGCard{Judge}{You once weighed guilt and mercy.}{Insight, Intimidation}{Gavel, signet ring}{Scrolls of law, 15 gp}{When disputes arise, people defer to your measured authority.}
+}{
+  \BGCard{Jailer}{You kept keys and secrets alike.}{Perception, Intimidation}{Ring of keys}{Chain, uniform, 8 gp}{When confinement or escape is at stake, you know locks and limits.}
+}
+
+% ---------- K ----------
+\subsection*{K}
+\BGRow{
+  \BGCard{Knight}{Sworn to a code, you wield honour as armour.}{Athletics, Persuasion}{One martial weapon}{Emblem of order, 25 gp}{When duty or chivalry is invoked, your name commands respect.}
+}{
+  \BGCard{Kidnapper}{You know how to take someone alive and unseen.}{Stealth, Athletics}{Rope, gag}{Dark hood, 5 gp}{When hostages or extractions occur, you handle bodies discreetly.}
+}{
+  \BGCard{Keeper}{You guard forbidden sites.}{Perception}{Key ring, secret symbol}{Lantern, 10 gp}{When trespass threatens, your vigilance protects what must endure.}
+}
+
+% ---------- L ----------
+\subsection*{L}
+\BGRow{
+  \BGCard{Laborer}{Hard work built your strength and patience.}{Athletics, Endurance}{Simple tool}{Gloves, 3 gp}{When hauling, building, or enduring hardship, you never falter.}
+}{
+  \BGCard{Linguist}{Languages unfold to you like puzzles.}{Arcana, History}{One language}{Notebooks, 10 gp}{When deciphering runes or dialects, you bridge understanding.}
+}{
+  \BGCard{Lookout}{You survive by spotting trouble first.}{Perception, Stealth}{Spyglass}{Dark cloak, 8 gp}{When ambushes threaten, your eyes save lives.}
+}
+
+% ---------- M ----------
+\subsection*{M}
+\BGRow{
+  \BGCard{Mide}{Traditional healer able to re-weave wounds.}{Medicine,}{Healer’s kit}{Herbs, charms, 10 gp}{When allies fall, your rituals knit body and spirit alike.}
+}{
+  \BGCard{Merchant}{Able to value items, haggle prices and create trade routes.}{Persuasion, Insight}{Abacus, scales}{Ledger, fine clothes, 25 gp}{When wealth or logistics matter, you find profit in any exchange.}
+}{
+  \BGCard{Musician}{You play an instrument with great skill.}{Performance, Insight}{Instrument}{Sheet music, tuning fork, 10 gp}{When mood or ceremony demands, your music alters hearts.}
+}
+
+% ---------- N ----------
+\subsection*{N}
+\BGRow{
+  \BGCard{Navy Officer}{You served at sea and understand command and currents.}{Athletics, Survival}{Navigator’s tools}{Uniform, compass, 20 gp}{When storms or crews threaten chaos, your orders restore order.}
+}{
+  \BGCard{Nomad}{Movement is life; you read the land’s temper.}{Animal Handling, Survival}{One vehicle proficiency}{Tent, 10 gp}{When routes or resources run thin, you find the next horizon.}
+}{
+  \BGCard{Naturalist}{You study flora and fauna in their element.}{Nature, Medicine}{Herbalism kit}{Specimen jars, 15 gp}{When wilderness or creatures matter, your insight spares mistakes.}
+}
+
+% ---------- O ----------
+\subsection*{O}
+\BGRow{
+  \BGCard{Orator}{Words are your chosen weapon.}{Persuasion, Intimidation}{Fine clothes}{Scrolls of speeches, 12 gp}{When crowds gather, you steer hearts with rhetoric.}
+}{
+  \BGCard{Outlaw}{The law hunts you—or once did.}{Stealth, Survival}{Thieves’ tools}{Hood, token of a crime, 5 gp}{When legality hinders progress, you know how to skirt it.}
+}{
+  \BGCard{Occultist}{Forbidden knowledge stains your hands.}{Arcana}{Strange tome}{Charms, black candle, 10 gp}{When mysteries turn dark, you recognise the signs.}
+}
+
+% ---------- P ----------
+\subsection*{P}
+\BGRow{
+  \BGCard{Poet}{You see rhythm in everything.}{Performance, Insight}{Instrument or quill}{Collected verse, 5 gp}{When emotion must be conveyed, you find the words.}
+}{
+  \BGCard{Pilgrim}{You journeyed to a sacred place and learned humility.}{Survival}{Walking staff}{Symbol of journeyed, 3 gp}{When faith or endurance is tested, you draw strength from vows.}
+}{
+  \BGCard{Philosopher}{You question everything, even gods.}{Insight, History}{One language}{Notebook of paradoxes, 8 gp}{When moral or logical knots appear, you untangle them aloud.}
+}
+
+% ---------- Q ----------
+\subsection*{Q}
+\BGRow{
+  \BGCard{Quarrier}{You carved stone for fortresses and cathedrals.}{Athletics, Investigation}{Mason’s tools}{Hammer, chisel, 8 gp}{When strength and precision matter, you understand weight and leverage.}
+}{
+  \BGCard{Quartermaster}{You kept men and materials supplied.}{Investigation, Persuasion}{Abacus, Cartographer’s tools}{Ledger, ration book, 15 gp}{When logistics or scarcity threaten, you balance the ledgers of survival.}
+}{
+  \BGCard{Quester}{You seek meaning through trials.}{Survival}{Symbol of quest}{Token of vow, 2 gp}{When destiny is uncertain, you see pattern in coincidence.}
+}
+
+% ---------- R ----------
+\subsection*{R}
+\BGRow{
+  \BGCard{Rhapsode}{Performer of epic verse who keeps oral history alive.}{Performance, History}{Instrument}{Scroll of poetry, 8 gp}{When memory or morale falters, you weave courage from words.}
+}{
+  \BGCard{Rogue}{A life of quiet larceny taught you every escape.}{Stealth, Acrobatics}{Thieves’ tools}{Cloak, 15 gp}{When subtlety or retreat is needed, you vanish between breaths.}
+}{
+  \BGCard{Revolutionary}{You fought for a cause, lost or won.}{Intimidation, Persuasion}{Common weapon}{Flag fragment, 5 gp}{When oppression looms, your conviction inspires defiance.}
+}
+
+% ---------- S ----------
+\subsection*{S}
+\BGRow{
+  \BGCard{Scout}{You move ahead to find safety—or trouble.}{Stealth, Perception}{Shortbow}{Cloak, 10 gp}{When the path is unknown, you make it known.}
+}{
+  \BGCard{Smuggler}{You know which officials look the other way.}{Deception, Sleight of Hand}{Thieves’ tools}{False-bottom chest, 15 gp}{When borders or tariffs arise, you find another way through.}
+}{
+  \BGCard{Scientist}{You test hypotheses with patience and fire.}{Arcana, Investigation}{Alchemist’s tools}{Lab notes, 20 gp}{When evidence or innovation matters, you bring method to madness.}
+}
+
+% ---------- T ----------
+\subsection*{T}
+\BGRow{
+  \BGCard{Troubadour}{You travel from hall to hall trading song for shelter.}{Performance, Persuasion}{Instrument}{Colourful cloak, 12 gp}{When diplomacy or entertainment is required, you charm for your supper.}
+}{
+  \BGCard{Tinker}{You mend what others discard.}{Arcana, Sleight of Hand}{Tinker’s tools}{Scrap parts, 8 gp}{When broken gear or contraptions fail, you fix them with flair.}
+}{
+  \BGCard{Tracker}{You follow signs others miss.}{Survival, Perception}{Hunting trap}{Boots, rope, 6 gp}{When prey or quarry hides, your eyes tell the story.}
+}
+
+% ---------- U ----------
+\subsection*{U}
+\BGRow{
+  \BGCard{Undertaker}{You prepare the dead and comfort the living.}{Medicine, Pathogens}{Healer’s kit}{Black cloak, 8 gp}{When fear or grief strikes, you know the rituals that steady hearts.}
+}{
+  \BGCard{Urchin}{You grew up on the streets, invisible yet alert.}{Stealth, Sleight of Hand}{Disguise kit, Thieves’ tools}{Pet mouse, token of luck, 5 gp}{When surviving in cities, you know every alley and whisper.}
+}{
+  \BGCard{Veteran}{You fought in numerous wars and learned what victory costs.}{Athletics, Intimidation}{Gaming set, Vehicle (land)}{Medal, tattered banner, 10 gp}{When discipline or battlefield tactics matter, you lead by experience.}
+}
+
+% ---------- V ----------
+\subsection*{V}
+\BGRow{
+  \BGCard{Vagabond}{You have no fixed home, only stories and scars.}{Survival, Deception}{One musical instrument}{Bedroll, trinkets, 4 gp}{When doors close, you find a way in through charm or persistence.}
+}{
+  \BGCard{Valet}{You once served a noble’s every whim.}{Insight, Persuasion}{Fine clothes}{Comb, pocket watch, 6 gp}{When etiquette or discretion is required, you anticipate needs unspoken.}
+}{
+  \BGCard{Vintner}{You make and judge fine wines.}{Nature, Insight}{Brewer’s supplies}{Corkscrew, bottle of vintage, 12 gp}{When feasts or trade talks begin, your palate earns quick favour.}
+}
+
+% ---------- W ----------
+\subsection*{W}
+\BGRow{
+  \BGCard{Wanderer}{Endless roads taught you the worth of kindness and cunning.}{Survival, Persuasion}{Instrument or map case}{Walking stick, worn boots, 6 gp}{When lost or friendless, you always find hospitality—or make it.}
+}{
+  \BGCard{Watchman}{You patrolled streets and heard every midnight tale.}{Perception, Investigation}{Lantern, whistle}{Badge, 8 gp}{When vigilance or timing matters, your senses never truly rest.}
+}{
+  \BGCard{Wright}{You build things that outlast you.}{Athletics, Investigation}{Carpenter’s tools}{Blueprints, hammer, 10 gp}{When structures fail or must endure, your hands know their language.}
+}
+
+% ---------- X ----------
+\subsection*{X}
+\BGRow{
+  \BGCard{Xenologist}{You study cultures foreign or forgotten.}{History, Insight}{One language}{Travel journal, 10 gp}{When meeting strangers or deciphering customs, you find common ground.}
+}{
+  \BGCard{Xylographer}{You carve truth into wood and symbol.}{Artisan’s tools, History}{Woodcarver’s tools}{Blocks, chisels, 8 gp}{When recording events or forging seals, your art leaves lasting marks.}
+}{
+  \BGCard{Xenophile}{You delight in all that is new and alien.}{Persuasion, Nature}{Collector’s kit}{Specimens, sketches, 6 gp}{When meeting outsiders or facing the unknown, curiosity overcomes fear.}
+}
+
+% ---------- Y ----------
+\subsection*{Y}
+\BGRow{
+  \BGCard{Yeoman}{You manage land and loyalty alike.}{Animal Handling, Persuasion}{Farmer’s tools}{Ledger, field map, 10 gp}{When estates or supply lines matter, you keep order among workers.}
+}{
+  \BGCard{Yachtsman}{You navigate by wind, instinct, and star.}{Athletics, Survival}{Navigator’s tools}{Coil of rope, compass, 15 gp}{When water separates friend and foe, you find the swiftest course.}
+}{
+  \BGCard{Youthful Idealist}{You burn with belief in a better world.}{Persuasion, Insight}{Symbol of cause}{Pamphlets, 2 gp}{When cynicism reigns, your conviction rekindles purpose.}
+}
+
+% ---------- Z ----------
+\subsection*{Z}
+\BGRow{
+  \BGCard{Zealot}{Intollerance drives every step you take.}{Intimidation}{Cudgel of conversion}{Talisman, scripture, 10 gp}{When others doubt, your certainty shakes mountains.}
+}{
+  \BGCard{Zoologist}{Know-how on animals and the skill to classify the unknown.}{Nature, Medicine}{Herbalism kit}{Sketchbook, field samples, 12 gp}{When beasts appear, you can judge mood, breed, and danger instantly.}
+}{
+  \BGCard{Zymurgist}{You brew spirits that heal or hinder.}{Nature, Investigation}{Brewer’s supplies}{Flasks, yeast cultures, 9 gp}{When morale or toxins are needed, your concoctions suit both.}
+}
